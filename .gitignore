@@ -4,3 +4,4 @@ mvnw.cmd
 *.iml
 target/
 .idea/
+logs/
