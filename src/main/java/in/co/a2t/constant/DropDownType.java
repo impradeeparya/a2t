@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum DropDownType {
-  SUBJECT("subject"), SUBJECT_TOPIC("subject_topic");
+  SUBJECT("subject"), SUBJECT_TOPIC("subject_topic"), USER_TYPE("user_type");
 
   private String name;
 

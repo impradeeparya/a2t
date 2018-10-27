@@ -47,7 +47,7 @@ public class UserController {
   public ApplicationResponse userById(@PathVariable("userId") String userId) {
     LOGGER.info("fetching user profile for userId : {}", userId);
     ApplicationResponse applicationResponse = successResponse.get();
-    applicationResponse.setPayload(userProfileSvc.userById(userId));
+    applicationResponse.setPayload(userProfileSvc.userByLoginId(userId));
     return applicationResponse;
   }
 

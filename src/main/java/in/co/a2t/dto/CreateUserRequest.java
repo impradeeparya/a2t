@@ -1,6 +1,7 @@
 package in.co.a2t.dto;
 
 import in.co.a2t.model.User;
+import in.co.a2t.model.UserType;
 
 public class CreateUserRequest {
 
@@ -10,6 +11,7 @@ public class CreateUserRequest {
   private String phoneNumber;
   private String password;
   private String loginId;
+  private long userTypeId;
 
 
   public String getFirstName() {
@@ -60,7 +62,8 @@ public class CreateUserRequest {
 
   public User toEntity() {
     User user = new User();
-    user.setName(this.firstName).setLoginId(this.loginId);
+    user.setName(this.firstName).setLoginId(this.loginId)
+        .setUserType(new UserType().setId(this.userTypeId));
     return user;
   }
 
@@ -73,10 +76,20 @@ public class CreateUserRequest {
     return this;
   }
 
+  public long getUserTypeId() {
+    return userTypeId;
+  }
+
+  public CreateUserRequest setUserTypeId(long userTypeId) {
+    this.userTypeId = userTypeId;
+    return this;
+  }
+
   @Override
   public String toString() {
     return "CreateUserRequest{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName
         + '\'' + ", email='" + email + '\'' + ", phoneNumber='" + phoneNumber + '\''
-        + ", password='" + password + '\'' + ", loginId='" + loginId + '\'' + '}';
+        + ", password='" + password + '\'' + ", loginId='" + loginId + '\'' + ", userTypeId='"
+        + userTypeId + '\'' + '}';
   }
 }

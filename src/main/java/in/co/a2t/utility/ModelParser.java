@@ -10,6 +10,7 @@ import in.co.a2t.dto.SubjectDto;
 import in.co.a2t.model.Question;
 import in.co.a2t.model.Subject;
 import in.co.a2t.model.SubjectTopic;
+import in.co.a2t.model.UserType;
 
 public interface ModelParser {
 
@@ -49,5 +50,14 @@ public interface ModelParser {
               .setName(question.getSubject().getName())));
     });
     return questionDtos;
+  };
+
+  Function<List<UserType>, List<DropDown>> userTypeDropDown = (userTypes) -> {
+    List<DropDown> dropDown = new ArrayList<>();
+    userTypes.forEach(userType -> {
+      DropDown data = new DropDown().setCode(userType.getId()).setDescription(userType.getType());
+      dropDown.add(data);
+    });
+    return dropDown;
   };
 }

@@ -6,6 +6,9 @@ public class UserInfo {
   private String lastName;
   private String email;
   private String phoneNumber;
+  private String userType;
+  private long userTypeId;
+
 
   public String getFirstName() {
     return firstName;
@@ -43,4 +46,28 @@ public class UserInfo {
     return this;
   }
 
+  public String getUserType() {
+    return userType;
+  }
+
+  public UserInfo setUserType(String userType) {
+    this.userType = userType;
+    return this;
+  }
+
+  public long getUserTypeId() {
+    return userTypeId;
+  }
+
+  public UserInfo setUserTypeId(long userTypeId) {
+    this.userTypeId = userTypeId;
+    return this;
+  }
+
+  @Override
+  public String toString() {
+    return "UserInfo{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\''
+        + ", email='" + email + '\'' + ", phoneNumber='" + phoneNumber + '\'' + ", userType='"
+        + userType + '\'' + ", userTypeId=" + userTypeId + '}';
+  }
 }

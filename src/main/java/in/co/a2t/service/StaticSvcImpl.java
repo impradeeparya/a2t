@@ -18,6 +18,9 @@ public class StaticSvcImpl implements StaticSvc {
   @Autowired
   private SubjectTopicSvc subjectTopicSvc;
 
+  @Autowired
+  private UserProfileSvc userProfileSvc;
+
   @Override
   public List<DropDown> fetchDropDownData(String type, Long code) {
 
@@ -35,6 +38,10 @@ public class StaticSvcImpl implements StaticSvc {
           } else {
             dropDown = Collections.emptyList();
           }
+          break;
+
+        case USER_TYPE:
+          dropDown = userProfileSvc.userTypes();
           break;
 
         default:
