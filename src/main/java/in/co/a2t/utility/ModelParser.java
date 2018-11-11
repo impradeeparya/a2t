@@ -7,6 +7,7 @@ import java.util.function.Function;
 import in.co.a2t.dto.DropDown;
 import in.co.a2t.dto.QuestionDto;
 import in.co.a2t.dto.SubjectDto;
+import in.co.a2t.model.Country;
 import in.co.a2t.model.Question;
 import in.co.a2t.model.Subject;
 import in.co.a2t.model.SubjectTopic;
@@ -56,6 +57,15 @@ public interface ModelParser {
     List<DropDown> dropDown = new ArrayList<>();
     userTypes.forEach(userType -> {
       DropDown data = new DropDown().setCode(userType.getId()).setDescription(userType.getType());
+      dropDown.add(data);
+    });
+    return dropDown;
+  };
+
+  Function<List<Country>, List<DropDown>> countryDropDown = (countries) -> {
+    List<DropDown> dropDown = new ArrayList<>();
+    countries.forEach(country -> {
+      DropDown data = new DropDown().setCode(country.getId()).setDescription(country.getName());
       dropDown.add(data);
     });
     return dropDown;
