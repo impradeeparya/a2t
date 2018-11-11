@@ -24,6 +24,9 @@ public class StaticSvcImpl implements StaticSvc {
   @Autowired
   private CountrySvc countrySvc;
 
+  @Autowired
+  private CourseSvc courseSvc;
+
   @Override
   public List<DropDown> fetchDropDownData(String type, Long code) {
 
@@ -49,6 +52,10 @@ public class StaticSvcImpl implements StaticSvc {
 
         case COUNTRY:
           dropDown = countrySvc.countries();
+          break;
+
+        case COURSE:
+          dropDown = courseSvc.courses();
           break;
 
         default:
