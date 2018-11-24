@@ -19,7 +19,7 @@ public class CompanyCandidate {
   @Column(name = "candidate_id")
   private Long id;
   @ManyToOne
-  @JoinColumn(name = "company_id")
+  @JoinColumn(name = "assessment_id")
   private Assessment assessment;
 
   @Column(name = "assessment_sch_date")

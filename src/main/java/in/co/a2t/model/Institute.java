@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "institutes")
-public class Industry {
+public class Institute {
 
   @Id
   @Column(name = "institute_id")
@@ -37,7 +37,7 @@ public class Industry {
     return id;
   }
 
-  public Industry setId(Long id) {
+  public Institute setId(Long id) {
     this.id = id;
     return this;
   }
@@ -46,7 +46,7 @@ public class Industry {
     return name;
   }
 
-  public Industry setName(String name) {
+  public Institute setName(String name) {
     this.name = name;
     return this;
   }
@@ -55,7 +55,7 @@ public class Industry {
     return description;
   }
 
-  public Industry setDescription(String description) {
+  public Institute setDescription(String description) {
     this.description = description;
     return this;
   }
@@ -64,7 +64,7 @@ public class Industry {
     return web;
   }
 
-  public Industry setWeb(String web) {
+  public Institute setWeb(String web) {
     this.web = web;
     return this;
   }
@@ -73,7 +73,7 @@ public class Industry {
     return email;
   }
 
-  public Industry setEmail(String email) {
+  public Institute setEmail(String email) {
     this.email = email;
     return this;
   }
@@ -82,7 +82,7 @@ public class Industry {
     return logoName;
   }
 
-  public Industry setLogoName(String logoName) {
+  public Institute setLogoName(String logoName) {
     this.logoName = logoName;
     return this;
   }
@@ -91,7 +91,7 @@ public class Industry {
     return logoLoc;
   }
 
-  public Industry setLogoLoc(String logoLoc) {
+  public Institute setLogoLoc(String logoLoc) {
     this.logoLoc = logoLoc;
     return this;
   }
@@ -100,7 +100,7 @@ public class Industry {
     return image;
   }
 
-  public Industry setImage(String image) {
+  public Institute setImage(String image) {
     this.image = image;
     return this;
   }
@@ -109,7 +109,7 @@ public class Industry {
     return contactPerson;
   }
 
-  public Industry setContactPerson(String contactPerson) {
+  public Institute setContactPerson(String contactPerson) {
     this.contactPerson = contactPerson;
     return this;
   }
@@ -118,7 +118,7 @@ public class Industry {
     return contactPersonEmail;
   }
 
-  public Industry setContactPersonEmail(String contactPersonEmail) {
+  public Institute setContactPersonEmail(String contactPersonEmail) {
     this.contactPersonEmail = contactPersonEmail;
     return this;
   }
@@ -127,7 +127,7 @@ public class Industry {
     return contactPersonMobile;
   }
 
-  public Industry setContactPersonMobile(String contactPersonMobile) {
+  public Institute setContactPersonMobile(String contactPersonMobile) {
     this.contactPersonMobile = contactPersonMobile;
     return this;
   }

@@ -41,7 +41,7 @@ public class Company {
   private String logo;
   @ManyToOne
   @JoinColumn(name = "industry_id")
-  private Industry industry;
+  private Institute institute;
 
   public Long getId() {
     return id;
@@ -160,12 +160,12 @@ public class Company {
     return this;
   }
 
-  public Industry getIndustry() {
-    return industry;
+  public Institute getInstitute() {
+    return institute;
   }
 
-  public Company setIndustry(Industry industry) {
-    this.industry = industry;
+  public Company setInstitute(Institute institute) {
+    this.institute = institute;
     return this;
   }
 }
